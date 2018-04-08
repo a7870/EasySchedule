@@ -13,7 +13,6 @@ import java.util.regex.Pattern;
 
 public class CourseBean implements Serializable {
 
-    private static final long serialVersionUID = -2080529292063641408L;
     private String Course_name; // 课程名
     private String Course_address; // 上课地点
     private String Course_teacher; // 课程老师
