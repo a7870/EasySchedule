@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.drawable.ColorDrawable;
@@ -15,6 +16,7 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
@@ -67,9 +69,14 @@ public class MainActivity extends Activity {
         drawAllCourse();
     }
 
-    /**
-     * 实例化所有对象
-     */
+    public void btnClick_login(View view){
+        Intent i = new Intent(MainActivity.this , LoginActivity.class);
+        startActivity(i);
+        finish();
+    }
+        /**
+         * 实例化所有对象
+         */
     private void initCtrl() {
         mChangeWeek = (TextView) findViewById(R.id.changeWeek);
         mLeftNo = (LinearLayout) findViewById(R.id.leftNo);
