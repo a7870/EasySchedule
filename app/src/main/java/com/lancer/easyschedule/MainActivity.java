@@ -238,6 +238,8 @@ public class MainActivity extends Activity {
      */
     private void praseJson() {
         String json = getResources().getString(R.string.kb);
+        //Intent intent = getIntent();
+        //String json = intent.getStringExtra("course");
         Gson gson = new Gson();
         mCourse = gson.fromJson(json, new TypeToken<ArrayList<CourseBean>>() {
         }.getType());
